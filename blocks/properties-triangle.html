@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <h5 class="page-header">Color</h5>
+          <input type="color" id="object_triangle_color" class="bgfillcolor" />
+        </div>
+        <div class="col-sm-3 col-md-3"><!-- Triangle Effects -->
+          <h5 class="page-header">Triangle Effects</h5>
+          <div class="col-sm-6 col-md-6"> 
+            
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="active"><a href="#triangle-stroke" aria-controls="triangle-stroke" role="tab" data-toggle="tab">Stroke</a></li>
+              <li role="presentation"><a href="#triangle-transparency" aria-controls="triangle-transparency" role="tab" data-toggle="tab">Transparency</a></li>
+              <li role="presentation"><a href="#triangle-shadow" aria-controls="triangle-shadow" role="tab" data-toggle="tab">Shadow</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-6"> 
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="triangle-stroke">
+                <input type="color" class="bgfillcolor" />
+                <div id="triangleStroke"> </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="triangle-transparency">
+                <div id="triangleOpacity"></div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="triangle-shadow">
+                <label>Shadow Color</label>
+                <input type="color" class="bgfillcolor" value="#000000" />
+                <input id="zTriangleShadowBlur" data-slider-id='zTriangleShadowBlurSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                <input id="zTriangleShadowOffsetX" data-slider-id='zTriangleShadowOffsetXSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                <input id="zTriangleShadowOffsetY" data-slider-id='zTriangleShadowOffsetYSlider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+              </div>
+            </div>
+          </div>
+          <!-- #Triangle Effects --> 
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h5 class="page-header">Layout Options</h5>
+          <div class="form">
+            <div class="form-group">
+              <button class="btn btn-default btn-sm zTriangleBringForward" type="button">Bring Forward</button>
+              <button class="btn btn-default btn-sm zTriangleSendBackward" type="button">Send Backward</button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-default btn-sm zTriangleAlignLeftBtn"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M6 10l3 3v-2h8v-2h-8v-2l-3 3zM4 2c-0.553 0-1 0.047-1 0.6v14.8c0 0.551 0.447 0.6 1 0.6 0.552 0 1-0.049 1-0.6v-14.8c0-0.553-0.448-0.6-1-0.6z"></path>
+              </svg> </button>
+              <button type="button" class="btn btn-default btn-sm zTriangleAlignCenterBtn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M8 10l-3-3v2h-4v2h4v2l3-3zM15 13v-2h4v-2h-4v-2l-3 3 3 3zM10 18c0.553 0 1-0.049 1-0.6v-14.8c0-0.553-0.447-0.6-1-0.6-0.552 0-1 0.047-1 0.6v14.8c0 0.551 0.448 0.6 1 0.6z"></path>
+              </svg> </button>
+              <button type="button" class="btn btn-default btn-sm zTriangleAlignRightBtn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M11 7v2h-8v2h8v2l3-3-3-3zM15 2.6v14.8c0 0.551 0.448 0.6 1 0.6 0.553 0 1-0.049 1-0.6v-14.8c0-0.553-0.447-0.6-1-0.6-0.552 0-1 0.047-1 0.6z"></path>
+              </svg></button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-default btn-sm zTriangleAlignTopBtn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M10 6l-3 3h2v8h2v-8h2l-3-3zM18 4c0-0.553-0.048-1-0.6-1h-14.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h14.8c0.552 0 0.6-0.447 0.6-1z"></path>
+              </svg></button>
+              <button type="button" class="btn btn-default btn-sm zTriangleAlignVCenterBtn"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M10 12l-3 3h2v4h2v-4h2l-3-3zM13 5h-2v-4h-2v4h-2l3 3 3-3zM18 10c0-0.553-0.048-1-0.6-1h-14.8c-0.552 0-0.6 0.447-0.6 1 0 0.551 0.048 1 0.6 1h14.8c0.552 0 0.6-0.449 0.6-1z"></path>
+              </svg> </button>
+              <button type="button" class="btn btn-default btn-sm zTriangleAlignBottomBtn"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M13 11h-2v-8h-2v8h-2l3 3 3-3zM17.4 15h-14.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h14.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1z"></path>
+              </svg> </button>
+            </div>
+          </div>
+        </div>
+        <!-- #Layout Options --> 
+      </div>
+    </div>
+  </div>
+</div>

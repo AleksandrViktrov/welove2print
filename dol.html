@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Design Tool</title>
+
+<!-- Bootstrap core CSS -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/roundslider.css" rel="stylesheet">
+<link href="css/bootstrap-slider.css" rel="stylesheet">
+<link href="css/jquery.colorpicker.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/dol.css" rel="stylesheet">
+<link href="css/overlay.css" rel="stylesheet">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+<script src="src/js/jquery-2.2.4.js"></script>
+<script src="src/js/jquery-ui.js"></script>
+<script src="src/js/roundslider.js"></script>
+<script src="src/js/bootstrap-slider.min.js"></script>
+<script src="src/js/fabric.min.js"></script>
+
+<!-- <script src="src/js/SimpleAjaxUploader.js"></script> -->
+<script src="src/js/jquery.colorpicker.js"></script>
+
+<script src="src/js/html5-qrcode.js"></script>
+<script src="src/js/qrcode.js"></script>
+<link rel="stylesheet" href="css/contextmenu.css" />
+
+</head>
+<body>
+
+<div id="overlay"></div>
+<div id="over_overlay">
+	<div id="overlay_clipArt" class="popup">
+		<div class="overlay_title"><span>Add ClipArt</span><img src="img/close.png" width="20px;" class="overlay_close" /></div>
+		<div class="overlay_body">
+			<p>Please select one Clip Art that you want to add. </p>
+			<ul id="clip_list" class="overlay_imglist">
+				<li><img src="img/clipart/1396445473013113462651.png"></li>
+				<li><img src="img/clipart/1396448112021512245701.png"></li>
+				<li><img src="img/clipart/1396448249021729910409.png"></li>
+				<li><img src="img/clipart/1396445120012520709663.png"></li>
+				<li><img src="img/clipart/1396448225021705558529.png"></li>
+				
+				<li><img src="img/clipart/1396445473013113462651.png"></li>
+				<li><img src="img/clipart/1396448112021512245701.png"></li>
+				<li><img src="img/clipart/1396448249021729910409.png"></li>
+				<li><img src="img/clipart/1396445120012520709663.png"></li>
+				<li><img src="img/clipart/1396448225021705558529.png"></li>
+
+				<li><img src="img/clipart/1396445473013113462651.png"></li>
+				<li><img src="img/clipart/1396448112021512245701.png"></li>
+				<li><img src="img/clipart/1396448249021729910409.png"></li>
+				<li><img src="img/clipart/1396445120012520709663.png"></li>
+				<li><img src="img/clipart/1396448225021705558529.png"></li>
+
+				<li><img src="img/clipart/1396445473013113462651.png"></li>
+				<li><img src="img/clipart/1396448112021512245701.png"></li>
+				<li><img src="img/clipart/1396448249021729910409.png"></li>
+				<li><img src="img/clipart/1396445120012520709663.png"></li>
+				<li><img src="img/clipart/1396448225021705558529.png"></li>
+
+				<li><img src="img/clipart/1396445473013113462651.png"></li>
+				<li><img src="img/clipart/1396448112021512245701.png"></li>
+				<li><img src="img/clipart/1396448249021729910409.png"></li>
+				<li><img src="img/clipart/1396445120012520709663.png"></li>
+				<li><img src="img/clipart/1396448225021705558529.png"></li>
+			</ul>
+			<center><input type="button" class="overlay_add" id="btn_clipart_addimg"  value="Add"/></center>
+		</div>
+	</div>
+	<div id="overlay_social" class="popup">
+		<div class="overlay_title"><span>Add ClipArt</span><img src="img/close.png" width="20px;" class="overlay_close" /></div>
+		<div class="overlay_body">
+			<p>Please select one Clip Art that you want to add. </p>
+
+			<ul id="social_list" class="overlay_imglist">
+				<li><img src="img/social/1395658767105927568523.png"></li>
+				<li><img src="img/social/1395658938110218906863.png"></li>
+				<li><img src="img/social/139565899611031632609.png"></li>
+				<li><img src="img/social/1395659059110419955403.png"></li>
+				<li><img src="img/social/1395659107110507826625.png"></li>
+				
+				<li><img src="img/social/1395658767105927568523.png"></li>
+				<li><img src="img/social/1395658938110218906863.png"></li>
+				<li><img src="img/social/139565899611031632609.png"></li>
+				<li><img src="img/social/1395659059110419955403.png"></li>
+				<li><img src="img/social/1395659107110507826625.png"></li>
+
+				<li><img src="img/social/1395658767105927568523.png"></li>
+				<li><img src="img/social/1395658938110218906863.png"></li>
+				<li><img src="img/social/139565899611031632609.png"></li>
+				<li><img src="img/social/1395659059110419955403.png"></li>
+				<li><img src="img/social/1395659107110507826625.png"></li>
+
+				<li><img src="img/social/1395658767105927568523.png"></li>
+				<li><img src="img/social/1395658938110218906863.png"></li>
+				<li><img src="img/social/139565899611031632609.png"></li>
+				<li><img src="img/social/1395659059110419955403.png"></li>
+				<li><img src="img/social/1395659107110507826625.png"></li>
+
+				<li><img src="img/social/1395658767105927568523.png"></li>
+				<li><img src="img/social/1395658938110218906863.png"></li>
+				<li><img src="img/social/139565899611031632609.png"></li>
+				<li><img src="img/social/1395659059110419955403.png"></li>
+				<li><img src="img/social/1395659107110507826625.png"></li>
+			</ul>
+			<center><input type="button" class="overlay_add" id="btn_social_addimg"  value="Add"/></center>
+		</div>
+	</div>
+	<div id="overlay_qrcode" class="popup">
+		<div class="overlay_title"><span>Add QRCode</span><img src="img/close.png" width="20px;" class="overlay_close" /></div>
+		<div class="overlay_body">
+			<p>Please Generate & Add QR Code here. </p>
+			<ul class="tab">
+				<li id="btn_txt" class="sel">Text</li>
+				<li id="btn_url">URL</li>
+				<li id="btn_num">Number</li>
+			</ul>
+			<textarea id="text_qrcode" placeholder="Text Here"></textarea>
+			<div id="qrcode_area"></div>
+			<ul id="qrul">
+				<li>Width : </li>
+				<li><input type="text" id="input_qr_width" value="50"></li>
+				<li>Height : </li>
+				<li><input type="text" id="input_qr_height" value="50"></li>
+			</ul>
+			<ul class="property-ul">
+				<li>Color : </li>
+				<li><input type="text" id="qrcolor" value="000000"></li>
+				<li>BgColor : </li>
+				<li><input type="text" id="qrbgcolor" value="ffffff"></li>
+			</ul>
+			<center><input type="button" class="overlay_add" id="btn_qrcode_addimg"  value="Add"/></center>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<a class="navbar-brand" href="#">Welove2print.com</a> </div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li><a href="#" class="w2p-cut"><i class="fa fa-cut"></i> Cut</a></li>
+				<li><a href="#" class="w2p-copy"><i class="fa fa-copy"></i> Copy</a></li>
+				<li><a href="#" class="w2p-paste"><i class="fa fa-paste"></i> Paste</a></li>
+				<li><a href="#" class="w2p-undo"><i class="fa fa-undo"></i> Undo</a></li>
+				<li><a href="#" class="w2p-redo"><i class="fa fa-repeat"></i> Redo</a></li>
+				<li><a href="#" class="w2p-save"><i class="fa fa-briefcase"></i> Save</a></li>
+			</ul>
+			<form class="navbar-form navbar-right">
+				<button type="button" class="btn btn-primary checkout">Checkout &raquo;</button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<!-- The file upload form used as target for the file upload widget -->
+<form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar zDolMainNav">
+					<li class="active">
+						<a href="#" class="zDrawObject" object="itext"><i class="fa fa-font"></i> Add Text</a>
+					</li>
+					<li>
+						<a href="#" class="zDrawObject" id="btn_add_image" ><i class="fa fa-image"></i> Add Images</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle zDrawObject" object="square" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-square"></i> Add Shapes <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Select Shape</li>
+							<li><a href="#" class="zDrawObject" object="circle"><i class="fa fa-circle"></i> Circle</a></li>
+							<li><a href="#" class="zDrawObject" object="square"><i class="fa fa-square"></i> Square</a></li>
+							<li><a href="#" class="zDrawObject" object="triangle"><i class="fa fa-caret-up"></i> Triangle</a></li>
+							<li><a href="#" class="zDrawObject" object="line"><i class="fa fa-minus"></i> Line</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" id="btn_add_clipart" class="zDrawObject"><i class="fa fa-star"></i> Add Clip Art</a>
+					</li>
+					<li>
+						<a href="#" id="btn_add_social" class="zDrawObject"><i class="fa fa-random"></i> Add Social</a>
+						</li>
+					<li>
+						<a href="#" id="btn_create_qr" class="zDrawObject"><i class="fa fa-qrcode"></i> Create QR</a>
+						</li>
+					<li>
+						<a href="#" id="btn_background" class="zDrawObject"><i class="fa fa-credit-card-alt"></i> Background</a>
+					</li>
+					<li>
+						<form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+							<input class="fileupload" id="fileupload_loadSVG" type="file" name="files" single>
+							<!-- <input type="file" id="fileupload_background" name="files" single> -->
+								<!--input type="file" name="fileToUpload" id="filebackground" accept="image/*"/-->
+							<a href="#" id="btn_loadSVG" class="zDrawObject"><i class="fa fa-folder-open"></i> Add SVG
+								<button class="btimage" title="" id="" style="opacity:0">
+								</button>
+							</a>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<div id="drawing_view" class="">
+				<div id="canvas_box" class="contex_menu_canvas">
+					<!-- <div id="border_view" class=""></div> -->
+					<canvas id="welove2pc"></canvas>
+				</div>
+				<div id="image_tools_div">
+					<input type="button" id="preview_button" class="zoom_button" value="preview">
+					<input type="button" id="zoom_out_btton" class="zoom_button" value="zoom out">
+					<input type="button" id="zoom_in_btton" class="zoom_button" value="zoom in">
+					<input type="button" id="zoom_reset" class="zoom_button" value="zoom reset">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="image_property_area" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+		<ul id="source_list">
+			<li id="img_skydrive" class="sel">
+				<span>My Images</span>
+			</li>
+			<li id="img_picasa">
+				<span>Picasa</span>
+			</li>
+			<li id="img_flickr">
+				<span>Flickr</span>
+			</li>
+			<li id="img_facebook">
+				<span>Facebook</span>
+			</li>
+			<li id="img_instagram">
+				<span>Instagram</span>
+			</li>
+		</ul>
+		<div id="upload_image_area">
+			<section>
+				<h4>Drag and drop your Uploaded Images</h4>
+				
+				<ul id="uploaded_image_list"></ul>
+				<!-- <a href="#" id="btn_add_more">Add New Image</a> -->
+
+				<button class="addimage" title="Add Background" id="filebackground">
+					<!--input type="file" name="fileToUpload" id="filebackground" accept="image/*"/-->
+					<img src="img/img_bg.png">
+				</button>
+				<input class="fileupload" id="fileupload_file" type="file" name="files" multiple>
+				<div id="img_progressOuter" class="progress progress-striped active" style="display:none; margin-top:auto">
+					<div id="img_progressBar" class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+					</div>
+				</di>
+			</section>
+		</div>
+		<div id="upload_picasa" class="uploading_panel">
+			<span>Picasa User/Email</span>
+			<input type="text" name="username" id="picasa_username" autocomplete="off">
+			<input type="button" id="getimage_picasa" value="Get Images">
+		</div>
+		<div id="upload_flickr" class="uploading_panel">
+			<span>Flickr Username</span>
+			<input type="text" name="username" id="flickr_username" autocomplete="off">
+			<input type="button" id="getimage_flickr" value="Get Images">
+		</div>
+		<div id="upload_facebook" class="uploading_panel">
+			<!-- <input type="button" id="getimage_facebook" value="Get My Facebook Images"> -->
+		</div>
+		<div id="upload_instagram" class="uploading_panel">
+			<!-- <input type="button" id="getimage_instagram" value="Get My Instagram Images"> -->
+		</div>
+		<div id="album_list_panel" class="uploading_panel">
+			<span>All Albums</span>
+			<a href="#" class="btn_ChangeUserName" onclick="changeUserName()">Change UserName</a>
+			<ul id="album_button_list" class="social_uploaded_image_list"></ul>
+		</div>
+		<div id="image_list_panel" class="uploading_panel">
+			<a href="#" id="btn_BackToAllAlbums" onclick="backToAllAlbum()">Back to All Albums</a>
+			<span id='text_albumstate'>All Albums</span>
+			<a href="#" class="btn_ChangeUserName" onclick="changeUserName()">Change UserName</a>
+			<ul id="photos_list" class="social_uploaded_image_list"></ul>
+		</div>
+	</div>
+
+</form>
+
+<div id="preview_panel" class="panel">
+	<div id="preview_image"></div>
+	<input type="button" id="close_preview_button" class="zoom_button" value="close">
+	<div id="preview_border"></div>
+	<!-- <img id="preview_image" src="#"> -->
+</div>
+
+<div id="background_area">
+	<center>Select Background options from Bellow</center>
+	<ul>
+		<li id="btn_setbg">
+			<form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+				<input class="fileupload" id="fileupload_background" type="file" name="files" single>
+				<!-- <input type="file" id="fileupload_background" name="files" single> -->
+				<button class="btimage" title="Add Background" id="newimage_background">
+					<!--input type="file" name="fileToUpload" id="filebackground" accept="image/*"/-->
+					<img src="img/img_bg.png">
+				</button>
+			</form>
+		</li>
+		<li id="btn_fillcolor">
+			<input type="text" class="bgfillcolor">
+		</li>
+		<li id="btn_delbackground">
+			<button class="btimage" title="Remove Background"><img src="img/img_delbg.png"></button>
+		</li>
+	</ul>
+	<div id="progressOuter" class="progress progress-striped active" style="display:none;">
+		<div id="progressBar" class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+		</div>
+	</div>
+	<div id="msgBox"></div>
+</div>
+
+<div class="wl2p-properties collapse">
+<!-- 	<div class="zPanels p_line" w3-include-HTML="blocks/properties-line.html">My HTML include will go here. Line</div>
+	<div class="zPanels p_triangle" w3-include-HTML="blocks/properties-triangle.html">My HTML include will go here. Triangle</div>
+	<div class="zPanels p_rect" w3-include-HTML="blocks/properties-rectangle.html">My HTML include will go here. Rect</div> -->
+	<div class="zPanels p_circle" w3-include-HTML="blocks/properties-circle.html">My HTML include will go here.</div>
+	<div class="zPanels p_itext" w3-include-HTML="blocks/properties-itext.html">My HTML include will go here.</div>
+	<div class="zPanels p_pathgroup" w3-include-HTML="blocks/properties-pathgroup.html">My HTML include will go here. Line</div>
+	<div class="zPanels p_image" w3-include-HTML="blocks/properties-image.html">My HTML include will go here. Line</div>
+	<div class="zPanels p_qrcode" w3-include-HTML="blocks/properties-qrcode.html">My HTML include will go here. Line</div>
+</div>
+
+<nav id="context-menu" class="context-menu">
+	<ul class="context-menu__items">
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="Cut"><i class="normal"></i>Cut</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="Copy"><i class="normal"></i>Copy</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="Paste"><i class="normal"></i>Paste</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="Delete"><i class="normal"></i>Delete</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="Group"><i class="normal"></i>Group</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="UnGroup"><i class="normal"></i>UnGroup</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="BringToFront"><i class="normal"></i>Bring to Front</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="BringForward"><i class="normal"></i>Bring Forward</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="SendBackward"><i class="normal"></i>Send Backward</a>
+		</li>
+		<li class="context-menu__item">
+			<a href="#" class="context-menu__link" data-action="SendToBack"><i class="normal"></i>Send to Back</a>
+		</li>
+	</ul>
+</nav>
+
+
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="src/editor.js"></script> 
+<script src="src/undo.redo.js"></script> 
+<script src="src/crud.js"></script> 
+<script src="src/i-text.js"></script>
+<script src="src/shapes.js"></script>
+
+<script src="src/image.js"></script>
+<script src="src/popup.js"></script>
+
+<script src="src/facebook.js"></script>
+<script src="src/js/ig.js"></script>
+<script src="src/instagram.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<script src="src/js/gaussianblur_filter.class.js"></script>
+<script src="src/picasa.script.js"></script>
+<script src="src/flickr.js"></script>
+
+<script src="src/social.js"></script>
+<script src="src/js/jquery.fileupload.js"></script>
+<script src="src/contextmenu.js"></script>
+
+
+<script language="javascript">
+	window.onload = function(){
+		jQuery("#fontBlur").roundSlider({
+				radius: 50,
+				circleShape: "pie",
+				sliderType: "min-range",
+				showTooltip: true,
+				value: 20,
+				max: 10,
+				startAngle: 315,
+			change: function(e){
+				var size = this.getValue();
+				var obj = canvas.getActiveObject();
+				//obj.set({ blur : size });
+				obj.set({fill: 'rgba(0,0,0,1)'});
+				//alert(size);
+				obj.setShadow({
+						color: 'rgba(0,0,0,1)',
+						blur: size,
+						offsetX: 0,
+						offsetY: 0
+					});
+				//(e.getValue());
+				
+				canvas.renderAll();
+			},
+		});
+
+		jQuery( document ).ready(function($)
+		{
+			 var imageObj   = new ClassImageProc();
+			 var popupObj   = new ClassPopupObj();
+			 var socialObj  = new ClassSocialObj();
+		}); 
+	};
+
+	function traceEvent(e)
+	{
+		(e.getValue());
+		jQuery('title').html(e.getValue());
+	}
+
+	(function()
+	{
+		myHTMLInclude();
+		function myHTMLInclude() {
+			var z, i, a, file, xhttp;
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				if (z[i].getAttribute("w3-include-html")) {
+					a = z[i].cloneNode(false);
+					file = z[i].getAttribute("w3-include-html");
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (xhttp.readyState == 4 && xhttp.status == 200) {
+							a.removeAttribute("w3-include-html");
+							a.innerHTML = xhttp.responseText;
+							z[i].parentNode.replaceChild(a, z[i]);
+							myHTMLInclude();
+						}
+					}      
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					return;
+				}
+			}
+		}
+
+	})();
+
+
+	$(function () {
+		'use strict';
+		// Change this to the location of your server-side upload handler:
+		var url = window.location.hostname === 'blueimp.github.io' ?
+								'//jquery-file-upload.appspot.com/' : 'server/php/';
+
+		$('.fileupload').fileupload({
+				url: url,
+				dataType: 'json',
+				done: function (e, data) {
+					var target = e.target;
+					if(target.id == 'fileupload_loadSVG') {
+						var file = data.result.files[0];
+					    var newUrl = "server/php/files/" + file.name;
+						if(file.name.split('.').pop() == 'svg') {
+							fabric.loadSVGFromURL(newUrl, function(objects, options) {
+								for (var i = objects.length - 1; i >= 0; i--)
+								{
+									objects[i].left = objects[i].transformMatrix[4];
+							        objects[i].top = objects[i].transformMatrix[5];
+							        objects[i].transformMatrix[4] = 0;
+							        objects[i].transformMatrix[5] = 0;
+							        objects[i].setCoords();
+							        objects[i].selectable = true;
+							        if(objects[i].text) {
+							      		objects[i].top += objects[i].height * 0.5;
+										var text = objects[i].text;
+										var textobj = objects[i].toObject();
+										delete textobj.text;
+										delete textobj.type;
+										var clonedtextobj = JSON.parse(JSON.stringify(textobj));
+
+										var iTextbox = new fabric.IText(text, clonedtextobj);
+										canvas.add(iTextbox);
+										objects.splice(i, 1);
+									}
+								}
+							    if(objects.length > 0)
+							    {
+							    	canvas.add.apply(canvas, objects);
+							    	canvas.setActiveObject(objects[objects.length-1]);
+							    }
+							}.bind(this));
+							// fabric.loadSVGFromURL(newUrl, function (objects, options)
+							// {
+							// 	// var img = fabric.util.groupSVGElements(objects, options);
+							// 	// 	img.set({left : canvas_left + 50, top : canvas_top + 50});
+
+							// 	// var cw = canvas_width - 30;
+							// 	// var ch = canvas_height - 30;
+							// 	// var width = img.width;
+							// 	// var height = img.height;
+							// 	// var scale = 1;
+							// 	// if(height > ch)
+							// 	// {
+							// 	// 	scale = ch / height;
+							// 	// }
+							// 	// if(scale * width > cw)
+							// 	// {
+							// 	// 	scale = scale * cw / (scale* width);
+							// 	// }
+							// 	// img.set(
+							// 	// {
+							// 	// 	left 	: canvas_left,// + (canvas_width - width * scale) * 0.5, 
+							// 	// 	top 	: canvas_top,// + (canvas_height - height * scale) * 0.5,
+							// 	// 	width : width * scale,
+							// 	// 	height : height * scale,
+							// 	// 	lockUniScaling : true
+							// 	// });
+							// 	// canvas.setActiveObject(img);
+							// 	// canvas.add(img).renderAll();
+
+							// 	for(var i = 0; i < objects.length; i++)
+							// 	{
+							// 		var img = objects[i];
+							// 		var cw = canvas_width - 30;
+							// 		var ch = canvas_height - 30;
+							// 		var width = img.width;
+							// 		var height = img.height;
+							// 		var scale = 1;
+							// 		if(height > ch)
+							// 		{
+							// 			scale = ch / height;
+							// 		}
+							// 		if(scale * width > cw)
+							// 		{
+							// 			scale = scale * cw / (scale* width);
+							// 		}
+							// 		img.set(
+							// 		{
+							// 			left 	: 0,// + (canvas_width - width * scale) * 0.5, 
+							// 			top 	: 0,// + (canvas_height - height * scale) * 0.5,
+							// 			width : width * scale,
+							// 			height : height * scale,
+							// 			lockUniScaling : true
+							// 		});
+							// 		canvas.setActiveObject(img);
+							// 		canvas.add(img).renderAll();
+							// 	}
+							// });
+						}
+					}
+					else if(target.id == 'fileupload_background') {
+						if($("#background_area").css("display") != 'none') {
+							var file = data.result.files[0];
+						    var newUrl = "server/php/files/" + file.name;
+							fabric.Image.fromURL(newUrl, function(img) {
+								img.set({
+									left 	: canvas_left, 
+									top 	: canvas_top,
+									scaleX : canvas_width / img.width,
+									scaleY : canvas_height / img.height,
+									type 	: "background",
+									selectable : false,
+								});
+
+								// main.canvas.add(img);
+								canvas.backgroundImage = img;
+								canvas.renderAll();
+							});
+						}
+					}
+					else {
+						$('#img_progressOuter').css('display', "none");
+						$.each(data.result.files, function (index, file) {
+						    var img = new Image();
+						    img.onload = function(){
+						    	var newWidth = this.width * 60 / this.height;
+						    	var newThumUrl = "server/php/files/thumbnail/" + file.name;
+								var li_html = "<li style='width: " + (newWidth + 3) + "px;'>";
+								li_html += "<img src='" + newThumUrl + "'";
+								li_html += " style='width: " + newWidth;
+								li_html += "px;'></li>";
+
+
+								$("#btn_add_more").fadeIn();
+								$("#uploaded_image_list").fadeIn();
+								// console.log(xpos);
+								
+								$("#uploaded_image_list").append(li_html);
+								$("#uploaded_image_list li").draggable({helper : "clone"});
+
+								$("#upload_form").css("display", "none");
+								$("#fileToUpload").val("");
+								$("#fileToUpload").attr("value", "");
+
+						    };
+							img.src = "server/php/files/" + file.name;
+						});
+					}
+				},
+				progressall: function (e, data) {
+						var progress = parseInt(data.loaded / data.total * 100, 10);
+						if(progress >= 100)
+						{
+							// alert("ooo");
+						 $('#img_progressOuter .progress-bar-success').css(
+								'width',
+								'100%'
+							);
+							$('#img_progressOuter').css('display', 'none');
+						}
+						else
+						{
+							//alert(progress);
+						 $('#img_progressOuter').css('display', "block");
+							$('#img_progressOuter .progress-bar-success').css(
+									'width',
+									progress + '%'
+							);
+						}
+				}
+		}).prop('disabled', !$.support.fileInput)
+				.parent().addClass($.support.fileInput ? undefined : 'disabled');
+
+	});
+
+</script>
+
+</body>
+</html>
