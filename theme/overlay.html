@@ -1,0 +1,285 @@
+<div id="overlay"></div>
+<div id="over_overlay">
+    <div id="overlay_new" class="popup">
+        <div class="overlay_title">
+            <span>New Project</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body" <?php echo $after_css; ?>>
+            <center><p>Please input Floor Width and Height.</p></center>
+            
+            <table class="overlay-table">
+                <tr>
+                    <td><span>Name: </span></td>
+                    <td>
+                        <input type="text" id="new-project-title">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Width: </span></td>
+                    <td>
+                        <input type="text" id="txt_width">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Height: </span></td>
+                    <td>
+                        <input type="text" id="txt_height">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span>Description: </span></td>
+                    <td>
+                        <textarea id="new-project-descr"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <center><input type="button" class="overlay_add" id="btn_new"  value="Create New"/></center>
+        </div>
+        <div class="overlay_body" <?php echo $before_css; ?> >
+            <center class="overlay-msg">
+                <span class="min-font">To use save/load functionality you must Login or Signup</span>
+            </center>
+            <center>
+                <a href="#" class="btn-go-login">Login</a>
+                <span class="min-font">or</span>
+                <a href="#" class="btn-go-signup">Signup</a>
+            </center>
+        </div>
+    </div>
+    <div id="loading_area" class="popup">
+        <center>
+            <img src="img/loading.gif"/>
+            <span>Loading 3D modelings...</span>
+        </center>
+        <center>
+            <span id="s_load">10</span>/<span id="s_total">10</span>
+        </center>
+        <div id="progress_bar">
+            <div id="complete"></div>
+        </div>
+    </div>
+    <div id="overlay_room" class="popup">
+        <div class="overlay_title">
+            <span>Custom Room</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body">
+            <div class="content_part no-border">
+                <span>Please input custom room information</span>
+            </div>
+            <div class="content_part">
+                <dd>Room Name:</dd>
+                <input type="text" id="txt_roomname">
+            </div>
+            <div class="content_part">
+                <dd>Room Width:</dd>
+                <input type="text" id="txt_roomwidth">
+            </div>
+            <div class="content_part">
+                <dd>Room Height:</dd>
+                <input type="text" id="txt_roomheight">
+            </div>
+            <br />
+            <center><input type="button" class="overlay_add" id="btn_custom"  value="Set Room"/></center>
+        </div>
+    </div>
+    <div id="overlay_load" class="popup">
+    	<div class="overlay_title">
+            <span>Load Saved File</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+    	<div class="overlay_body">
+        	<p>Please upload saved file. </p>
+            
+            <div class="upload_area">
+                <button>Choose a file</button>
+                <input class="obj_upload" type="file" name="files[]" accept=".sav">
+                <p class="help_str">If you are unsure where your saved file is, check your ‘downloads’ folder.</p>
+                <img id="loading" src="img/loading.gif" style="">
+                <div class="files"></div>
+            </div>
+            <center class="error_log">Please select file!</center>
+            <br />
+            <center><input type="button" class="overlay_add" id="btn_load"  value="Load"/></center>
+        </div>
+    </div>
+    <div id="overlay_background" class="popup">
+        <div class="overlay_title">
+            <span>Floor</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body">
+            <h5 class="active"><label><input type="radio" checked name="bg_type">Basic Colour</label></h3>
+            <div class="overlay_content">
+                <span>Select Color : </span>
+                <p id="p_bgColor"></p>
+                <img src="img/art-palette.png"  id="btn_bgpalete">
+                <div class="clear_both"></div>
+            </div>
+
+            <h5><label><input type="radio" name="bg_type">Basic Pattern</label></h3>
+            <div class="overlay_content">
+                <ul class="content_list" id="pattern_area">                    
+                </ul>
+            </div>
+            <br />
+            <center><input type="button" class="overlay_add" id="btn_bgChange"  value="Change"/></center>
+        </div>
+    </div>
+    <div id="overlay_ground" class="popup">
+        <div class="overlay_title">
+            <span>Ground Background</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body">
+            <h5 class="active"><label><input type="radio" checked name="bg_type">Basic Colour</label></h3>
+            <div class="overlay_content">
+                <span>Select Color : </span>
+                <p id="p_gColor"></p>
+                <img src="img/art-palette.png"  id="btn_gpalete">
+                <div class="clear_both"></div>
+            </div>
+
+            <h5><label><input type="radio" name="bg_type">Basic Pattern</label></h3>
+            <div class="overlay_content">
+                <ul class="content_list" id="gpattern_area">                    
+                </ul>
+            </div>
+            <br />
+            <center><input type="button" class="overlay_add" id="btn_groundChange"  value="Change"/></center>
+        </div>
+    </div>
+    <div id="overlay_login" class="popup">
+        <div class="overlay_title">
+            <span>User Login</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body">
+            <div class="content_part no-border">
+                <span>Please input correct user information</span>
+            </div>
+            <div class="content_part">
+                <dd>Email:</dd>
+                <input type="text" id="login-user" maxlength="64">
+            </div>
+            <div class="content_part">
+                <dd>Password:</dd>
+                <input type="password" id="login-pass" maxlength="64">
+            </div>
+            <center class="msg-area"><label>Error</label></center>
+            <br />
+            <center><input type="button" class="overlay_add" id="sbm_login"  value="Login"/></center>
+        </div>
+    </div>
+    <div id="overlay_signup" class="popup">
+        <div class="overlay_title">
+            <span>User Singup</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body">
+            <div class="content_part no-border">
+                <span>Please input correct user information</span>
+            </div>
+            <div class="content_part">
+                <dd>Email:</dd>
+                <input type="text" id="regist-user" maxlength="64">
+            </div>
+            <div class="content_part">
+                <dd>Password:</dd>
+                <input type="password" id="regist-pass" maxlength="64">
+            </div>
+            <div class="content_part">
+                <dd>Confirm:</dd>
+                <input type="password" id="regist-conf" maxlength="64">
+            </div>
+            <center class="msg-area"><label>Error</label></center>
+            <br />
+            <center><input type="button" class="overlay_add" id="sbm_signup"  value="Signup"/></center>
+        </div>
+    </div>
+
+    <div id="open_project" class="popup">
+        <div class="overlay_title">
+            <span>Load Project</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body" <?php echo $after_css; ?> >
+            <div class="upload_area">
+                <table class="overlay-table">
+                    <tr>
+                        <td rowspan=2><span>Saved: </span></td>
+                        <td>
+                            <select id="project_list">
+                                <option>First Project</option>
+                                <option>Second Project</option>
+                                <option>Third Project</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="last_updated">(Last Updated : _)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Notes:</span></td>
+                        <td>
+                            <textarea id="view_pdescr" disabled></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <center><input type="button" class="overlay_add" id="btn_openprj" value="Open"/></center>
+        </div>
+        <div class="overlay_body" <?php echo $before_css; ?> >
+            <center class="overlay-msg">
+                <span class="min-font">To use save/load functionality you must Login or Signup</span>
+            </center>
+            <center>
+                <a href="#" class="btn-go-login">Login</a>
+                <span class="min-font">or</span>
+                <a href="#" class="btn-go-signup">Signup</a>
+            </center>
+        </div>
+    </div>
+
+    <div id="save_project" class="popup">
+        <div class="overlay_title">
+            <span>Save As Project</span>
+            <img src="img/close.png" width="20px;" class="overlay_close" />
+        </div>
+        <div class="overlay_body" <?php echo $after_css; ?> >
+            <div class="upload_area">
+                <table class="overlay-table">
+                    <tr>
+                        <td rowspan=2><span>Name: </span></td>
+                        <td>
+                            <select id="project-list-save">
+                                <option>First Project</option>
+                                <option>Second Project</option>
+                                <option>Third Project</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="last-updated-save">(Last Updated : _)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Notes:</span></td>
+                        <td>
+                            <textarea id="project-descr-save"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <center><input type="button" class="overlay_add" id="btn_saveprj" value="Save"/></center>
+        </div>
+        <div class="overlay_body" <?php echo $before_css; ?> >
+            <center class="overlay-msg">To use save/load functionality you must login</center>
+            <center>
+                <a href="#" class="btn-go-login">Login</a>
+                <span class="min-font">or</span>
+                <a href="#" class="btn-go-signup">Signup</a>
+            </center>
+        </div>
+    </div>
+</div>

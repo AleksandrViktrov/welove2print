@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <h5 class="page-header">Fill Colors</h5>
+          <ul id="fillColor">
+            <li><input type="text" id="pathgroup_color1" class="bgfillcolor"/></li>
+            <li><input type="text" id="pathgroup_color2" class="bgfillcolor"/></li>
+          </ul>
+          <div class="clear_both"></div>
+          <!--input type="color" class="zFillColor1" />
+          <input type="color" class="zFillColor2" /-->
+          <h5 class="page-header">Border Color</h5>
+          <input type="text" id="pathgroup_border_color" class="bgfillcolor"/>
+        </div>
+        <div class="col-sm-3 col-md-3"><!-- Path Effects -->
+          <h5 class="page-header">Path Effects</h5>
+          <div class="col-sm-6 col-md-6"> 
+            
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="active"><a href="#path-stroke" aria-controls="path-stroke" role="tab" data-toggle="tab">Stroke</a></li>
+              <li role="presentation"><a href="#path-transparency" aria-controls="path-transparency" role="tab" data-toggle="tab">Transparency</a></li>
+              <li role="presentation"><a href="#path-blur" aria-controls="path-shadow" role="tab" data-toggle="tab">Blur</a></li>
+              <li>
+                <input type="button" value="Delete" class="delete_button">
+              </li>
+            </ul>
+
+              <div>
+                <input type="checkbox" value="" class="check_lock_object">
+                <span id="checktext_lock_object">Lock</span>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-6"> 
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="path-stroke">
+                <!-- <input type="color" class="zPathStrokeColor" /> -->
+                <div id="pathStroke"> </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="path-transparency">
+                <div id="pathOpacity"></div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="path-blur">
+                <div id="pathBlur"> </div>
+              </div>
+            </div>
+          </div>
+          <!-- #Path Effects --> 
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h5 class="page-header">Layout Options</h5>
+          <div class="form">
+            <div class="form-group">
+              <button class="btn btn-default btn-sm zCircleBringForward" type="button">Bring Forward</button>
+              <button class="btn btn-default btn-sm zCircleSendBackward" type="button">Send Backward</button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-default btn-sm zCircleAlignLeftBtn"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M6 10l3 3v-2h8v-2h-8v-2l-3 3zM4 2c-0.553 0-1 0.047-1 0.6v14.8c0 0.551 0.447 0.6 1 0.6 0.552 0 1-0.049 1-0.6v-14.8c0-0.553-0.448-0.6-1-0.6z"></path>
+              </svg> </button>
+              <button type="button" class="btn btn-default btn-sm zCircleAlignCenterBtn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M8 10l-3-3v2h-4v2h4v2l3-3zM15 13v-2h4v-2h-4v-2l-3 3 3 3zM10 18c0.553 0 1-0.049 1-0.6v-14.8c0-0.553-0.447-0.6-1-0.6-0.552 0-1 0.047-1 0.6v14.8c0 0.551 0.448 0.6 1 0.6z"></path>
+              </svg> </button>
+              <button type="button" class="btn btn-default btn-sm zCircleAlignRightBtn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M11 7v2h-8v2h8v2l3-3-3-3zM15 2.6v14.8c0 0.551 0.448 0.6 1 0.6 0.553 0 1-0.049 1-0.6v-14.8c0-0.553-0.447-0.6-1-0.6-0.552 0-1 0.047-1 0.6z"></path>
+              </svg></button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-default btn-sm zCircleAlignTopBtn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M10 6l-3 3h2v8h2v-8h2l-3-3zM18 4c0-0.553-0.048-1-0.6-1h-14.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h14.8c0.552 0 0.6-0.447 0.6-1z"></path>
+              </svg></button>
+              <button type="button" class="btn btn-default btn-sm zCircleAlignVCenterBtn"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M10 12l-3 3h2v4h2v-4h2l-3-3zM13 5h-2v-4h-2v4h-2l3 3 3-3zM18 10c0-0.553-0.048-1-0.6-1h-14.8c-0.552 0-0.6 0.447-0.6 1 0 0.551 0.048 1 0.6 1h14.8c0.552 0 0.6-0.449 0.6-1z"></path>
+              </svg> </button>
+              <button type="button" class="btn btn-default btn-sm zCircleAlignBottomBtn"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M13 11h-2v-8h-2v8h-2l3 3 3-3zM17.4 15h-14.8c-0.552 0-0.6 0.447-0.6 1s0.048 1 0.6 1h14.8c0.552 0 0.6-0.447 0.6-1s-0.048-1-0.6-1z"></path>
+              </svg> </button>
+            </div>
+          </div>
+        </div>
+        <!-- #Layout Options --> 
+      </div>
+    </div>
+  </div>
+</div>
